@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>add_ellipse.jpg</file>
+        <file>add_line.jpg</file>
+        <file>add_polygon.jpg</file>
+        <file>add_polyline.jpg</file>
+        <file>add_rectangle.jpg</file>
+        <file>add_text.jpg</file>
+        <file>Team_Logo.jpg</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

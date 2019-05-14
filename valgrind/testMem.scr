@@ -1,0 +1,48 @@
+Script started on Thu 09 May 2019 09:50:24 PM PDT
+]0;cs1c@cs1c-VirtualBox ~/hw/Class Project Memory Check[01;32mcs1c@cs1c-VirtualBox[00m [01;34m~/hw/Class Project Memory Check $[00m date
+Thu May  9 21:50:26 PDT 2019
+]0;cs1c@cs1c-VirtualBox ~/hw/Class Project Memory Check[01;32mcs1c@cs1c-VirtualBox[00m [01;34m~/hw/Class Project Memory Check $[00m ls -l
+total 48
+-rw-r--r-- 1 cs1c cs1c  4863 May  9 21:21 LinkedList.h
+-rw-r--r-- 1 cs1c cs1c   326 May  9 21:17 Makefile
+-rw-r--r-- 1 cs1c cs1c   772 May  9 21:48 testMem.cpp
+-rw-rw-r-- 1 cs1c cs1c     0 May  9 21:50 testMem.scr
+-rw-r--r-- 1 cs1c cs1c 25074 May  9 12:46 vector.h
+-rw-r--r-- 1 cs1c cs1c  1861 May  9 21:25 VectorNode.h
+]0;cs1c@cs1c-VirtualBox ~/hw/Class Project Memory Check[01;32mcs1c@cs1c-VirtualBox[00m [01;34m~/hw/Class Project Memory Check $[00m ./testMem[K[K[K[K[K[K[K[K[Kvalgrind --tool=memcheck --leak-check=yes ./testMem[C
+valgrind: ./testMem: No such file or directory
+]0;cs1c@cs1c-VirtualBox ~/hw/Class Project Memory Check[01;32mcs1c@cs1c-VirtualBox[00m [01;34m~/hw/Class Project Memory Check $[00m make all
+g++ -std=c++14 -Wall -g -c -o vector.o testMem.cpp
+g++ -std=c++14 -Wall -g -o testMem vector.o
+]0;cs1c@cs1c-VirtualBox ~/hw/Class Project Memory Check[01;32mcs1c@cs1c-VirtualBox[00m [01;34m~/hw/Class Project Memory Check $[00m valgrind --tool=memcheck --leak-check=yes ./testMem
+==12940== Memcheck, a memory error detector
+==12940== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==12940== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==12940== Command: ./testMem
+==12940== 
+creating vector object of size 2: 
+push back vector by 10
+push back vector by 12
+push back vector by 20
+Vector now contains: 10 12 20 
+check the vector size now: 3
+==12940== 
+==12940== HEAP SUMMARY:
+==12940==     in use at exit: 72,704 bytes in 1 blocks
+==12940==   total heap usage: 7 allocs, 6 frees, 73,896 bytes allocated
+==12940== 
+==12940== LEAK SUMMARY:
+==12940==    definitely lost: 0 bytes in 0 blocks
+==12940==    indirectly lost: 0 bytes in 0 blocks
+==12940==      possibly lost: 0 bytes in 0 blocks
+==12940==    still reachable: 72,704 bytes in 1 blocks
+==12940==         suppressed: 0 bytes in 0 blocks
+==12940== Reachable blocks (those to which a pointer was found) are not shown.
+==12940== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==12940== 
+==12940== For counts of detected and suppressed errors, rerun with: -v
+==12940== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+]0;cs1c@cs1c-VirtualBox ~/hw/Class Project Memory Check[01;32mcs1c@cs1c-VirtualBox[00m [01;34m~/hw/Class Project Memory Check $[00m exit
+exit
+
+Script done on Thu 09 May 2019 09:51:07 PM PDT
