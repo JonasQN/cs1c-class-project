@@ -50,6 +50,6 @@ shapeListModel.cpp 33 lines
 sort.cpp 25 lines
 storage.cpp 12 lines
 
-uml: https://github.com/JonasQN/cs1c-class-project/blob/master/ClassProject.png
+uml(draw.io): https://github.com/JonasQN/cs1c-class-project/blob/master/uml(1).drawio
 
 
